@@ -3,99 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Starborn Modlist</title>
+  <title>Starborn</title>
   <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      color: #fff;
+      background-color: #000;
     }
 
-    .hero {
-      flex: 1;
-      background: url('https://wildlandermod.com/img/wildlander_bg.jpg') center/cover no-repeat;
+    /* Header and Nav */
+    header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      width: 100%;
+      z-index: 10;
     }
 
     .logo {
-      max-width: 200px;
+      height: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #9c65ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://raw.githubusercontent.com/ItzIvy05/SkyGround/main/Resources/Main.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
-    }
-
-    p {
+    .hero p {
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+      max-width: 700px;
+      margin-bottom: 30px;
     }
 
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
+    .hero p em {
+      font-style: italic;
     }
 
-    .buttons a {
-      background-color: #ffffff;
-      color: #000000;
+    .btn-primary {
+      background-color: #a738ff;
+      color: white;
+      padding: 14px 28px;
       text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 4px;
       font-weight: bold;
+      border-radius: 4px;
       transition: background 0.3s;
     }
 
-    .buttons a:hover {
-      background-color: #cccccc;
+    .btn-primary:hover {
+      background-color: #902edf;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+    /* Wave divider */
+    .wave {
+      position: relative;
+      top: -1px;
+    }
+
+    /* About Section */
+    .about {
       background-color: #111;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .about img {
+      width: 64px;
+      margin-bottom: 20px;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .about strong {
+      font-weight: bold;
+    }
+
+    .about em {
+      font-style: italic;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <img class="logo" src="https://wildlandermod.com/img/wildlander_logo.png" alt="Logo" />
-    <h1>Starborn Modlist</h1>
-    <p>An immersive Skyrim experience focused on beauty, challenge, and deep roleplay.</p>
-    <div class="buttons">
+  <header>
+    <img src="https://wildlandermod.com/img/wildlander_logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="#">News</a>
       <a href="#">Download</a>
-      <a href="#">Modlist</a>
-      <a href="#">FAQ</a>
+      <a href="#">Media</a>
+      <a href="#">Roadmap</a>
+      <a href="#">Wiki</a>
       <a href="#">Discord</a>
-    </div>
+      <a href="#" style="color: orange;">Patreon</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to the world of Starborn</h1>
+    <p>Experience the next generation of roleplaying and immersive simulation.<br>
+    <em>Starborn</em> is the ultimate fantasy life sim, built for <em>Skyrim Special Edition</em>.</p>
+    <a href="#" class="btn-primary">Download Now</a>
   </section>
 
-  <footer>
-    &copy; 2025 Starborn Modlist. Unofficial fan-made project.
-  </footer>
+  <svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#111" d="M0,0 C480,100 960,0 1440,100 L1440,00 L0,0 Z"></path></svg>
+
+  <section class="about">
+    <img src="https://wildlandermod.com/img/wildlander_logo.png" alt="Icon">
+    <h2>A roleplaying experience unlike any other</h2>
+    <p><em>Starborn</em> is a free, <strong>auto-installable modpack for Skyrim</strong> that builds on Skyrim’s foundation to deliver an immersive fantasy roleplaying game like no other.<br><br>
+    With over <strong>500+ mods</strong> and deep integration, <em>Starborn</em> creates a living world where you become who you want, act as you want, and thrive in a deeply simulated universe.</p>
+  </section>
 
 </body>
 </html>
