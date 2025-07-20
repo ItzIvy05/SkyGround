@@ -1,8 +1,101 @@
-<html>
-  <head>
-    <title>This is a Test</title>
-  </head>  
-  <body>
-    <h1>Hello world</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starborn Modlist</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .hero {
+      flex: 1;
+      background: url('https://wildlandermod.com/img/wildlander_bg.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .buttons a {
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #cccccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <img class="logo" src="https://wildlandermod.com/img/wildlander_logo.png" alt="Logo" />
+    <h1>Starborn Modlist</h1>
+    <p>An immersive Skyrim experience focused on beauty, challenge, and deep roleplay.</p>
+    <div class="buttons">
+      <a href="#">Download</a>
+      <a href="#">Modlist</a>
+      <a href="#">FAQ</a>
+      <a href="#">Discord</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Starborn Modlist. Unofficial fan-made project.
+  </footer>
+
+</body>
 </html>
