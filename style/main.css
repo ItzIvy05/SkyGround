@@ -22,7 +22,7 @@
       content: "";
       position: fixed;
       inset: 0;
-      background: url('https://raw.githubusercontent.com/ItzIvy05/SkyGround/main/Resources/20250706135235_1.jpg') center center / cover no-repeat;
+      background: url('https://raw.githubusercontent.com/ItzIvy05/SkyGround/main/Resources/main.jpg') center center / cover no-repeat;
       z-index: -2;
     }
 
@@ -172,8 +172,11 @@
     }
 
     .hero {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       min-height: 100vh;
-      background: url('https://raw.githubusercontent.com/ItzIvy05/SkyGround/main/Resources/Main.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
