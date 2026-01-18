@@ -198,7 +198,7 @@ nav a:hover {
 }
 
 .about img {
-  width: 64px;
+  width: 512px;
   margin-bottom: 20px;
 }
 
@@ -213,6 +213,48 @@ nav a:hover {
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
+
+
+
+.MediaSection {
+  background: #1C1C1C;
+  padding: 60px 0; /* Vertical padding only */
+  text-align: center;
+}
+
+.mediagrid {
+  display: grid;
+  /* Control the spacing between images here */
+  gap: 5px; 
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 3 columns for desktop */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mediagrid div {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Keeps all boxes the same shape */
+  overflow: hidden;
+}
+
+.mediagrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes sure images fill the box without stretching */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.mediagrid img:hover {
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+
+
+
+/* ================= FOOTER ================= */
 footer {
   background: #000;
   text-align: center;
