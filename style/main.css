@@ -198,8 +198,13 @@ nav a:hover {
 }
 
 .about img {
-  width: 512px;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 30%;
+  height: 30%;
+  object-fit: cover; /* This makes sure images fill the box without stretching */
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .about h2 {
