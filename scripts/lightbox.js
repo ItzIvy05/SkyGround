@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!lightbox || !lightboxImg || images.length === 0) return;
 
   images.forEach(img => {
-    img.addEventListener("click", () => {
+    img.addEventListener("click", (e) => {
+      if (img.closest("[data-no-lightbox]")) return;
+
       lightboxImg.src = img.src;
       lightbox.classList.add("active");
     });

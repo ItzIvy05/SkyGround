@@ -1,7 +1,7 @@
 /* ================= README PAGE ================= */
 
 .readme-hero {
-  min-height: 45vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,9 +93,7 @@
 }
 
 .readme-section {
-  
   position: relative;
-  border-radius: 28px;
   padding: 20px 10px;
   margin-bottom: 70px;
 }
@@ -103,7 +101,7 @@
 /* ===== Requirements List Alignment ===== */
 .requirements-list {
   list-style: none;
-  padding-left: 0;        /* aligns with h2 */
+  padding-left: 0;
   margin-top: 24px;
 }
 
@@ -134,6 +132,8 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
 .wiki-image img {
