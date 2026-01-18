@@ -1,0 +1,91 @@
+/* ================= README PAGE ================= */
+
+.readme-hero {
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.readme-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.readme-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background: rgba(255, 255, 255, 0.04); /* very light */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* LEFT MENU */
+.readme-nav {
+  position: sticky;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.readme-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.readme-nav a:hover {
+  color: var(--primary-color);
+}
+
+/* RIGHT CONTENT */
+.readme-content section:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 60px;
+  scroll-margin-top: 140px;
+}
+
+.readme-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.readme-content p {
+  color: #bbb;
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.readme-content .warning {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .readme-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .readme-nav {
+    position: relative;
+    top: 0;
+    margin-bottom: 40px;
+  }
+}
