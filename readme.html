@@ -11,7 +11,13 @@
   <link rel="stylesheet" href="style/wikimain.css">
 </head>
 <body>
+  <!-- Lightbox JS Import -->
+  <script src="scripts/lightbox.js"></script>
+  <div id="lightbox">
+    <img id="lightbox-img" alt="">
+  </div>
 
+  <!-- Header -->
   <header>
     <div class="headerlogo">
       <a href="index.html"><h1>Ivy's Workshop</h1></a>
@@ -21,7 +27,7 @@
         <a href="hub.html" class="nav-link">Wiki</a>
 
         <div class="nav-dropdown-menu">
-          <a href="#">ReadMe</a>
+          <a href="#">Read Me</a>
           <a href="wiki.html">Wiki</a>
         </div>
       </div>
@@ -31,7 +37,7 @@
   </header>
 
 <section class="readme-hero">
-  <h1>ReadMe</h1>
+  <h1>READ ME</h1>
 </section>
 
 <section class="readme-layout">
@@ -52,11 +58,18 @@
 
   <!-- RIGHT CONTENT -->
   <main class="readme-content">
-
-    <section id="preamble">
-      <h2>Preamble</h2>
-      <p>
-        Something
+    <section id="preamble" class="readme-section">
+      <h2>SYSTEM REQUIREMENTS</h2>
+      <ul class="requirements-list">
+        <li>SkyGround Chronicles only supports English Steam versions of full Skyrim AE. GOG and other languages are not supported.</li>
+        <li>HDD and external SSD installs are absolutely not supported.</li>
+        <li>Any remote PC / desktop services or apps are not supported. (Including Steam Link)</li>
+        <li>Only Windows 10/11 operating systems are supported. Windows LTSC, special variants, lightened editions or any other modified variant WILL NOT WORK.</li>
+        <li>At least 8GB of GPU VRAM minimum is recommended for the list (1080p), otherwise you'll experience frequent stutters in exteriors. Higher resolutions may require even more.</li>
+      </ul>
+      <div class="wiki-image">
+        <img src="https://raw.githubusercontent.com/ItzIvy05/SkyGround-Chronicles/main/Resources/SYS-RQ.png">
+      </div>
       </p>
     </section>
 

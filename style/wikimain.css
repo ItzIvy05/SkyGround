@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: -85px;
 }
 
 .readme-hero h1 {
@@ -20,11 +21,30 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 80px 40px;
-  background: rgba(255, 255, 255, 0.04); /* very light */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  position: relative;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.015) 35%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    rgba(0, 0, 0, 0.65);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 28px;
+  padding: 42px 50px;
+  margin-bottom: 70px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 25px 60px rgba(0, 0, 0, 0.65);
+  
+  margin-bottom: 80px;
 }
 
 /* LEFT MENU */
@@ -34,7 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding-right: 20px;
+  padding: 30px 10px;
   border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -70,6 +90,62 @@
 .readme-content .warning {
   color: #ff4d4d;
   font-weight: bold;
+}
+
+.readme-section {
+  
+  position: relative;
+  border-radius: 28px;
+  padding: 20px 10px;
+  margin-bottom: 70px;
+}
+
+/* ===== Requirements List Alignment ===== */
+.requirements-list {
+  list-style: none;
+  padding-left: 0;        /* aligns with h2 */
+  margin-top: 24px;
+}
+
+.requirements-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+/* Custom bullet */
+.requirements-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.wiki-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.wiki-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.wiki-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Smooth scroll */
