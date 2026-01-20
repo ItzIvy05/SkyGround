@@ -291,12 +291,11 @@ nav a:hover {
 }
 
 
-
-
 .MediaSection {
   background: #1C1C1C;
   padding: 60px 0; /* Vertical padding only */
   text-align: center;
+
 }
 
 .mediagrid {
@@ -322,6 +321,7 @@ nav a:hover {
   object-fit: cover; /* This makes sure images fill the box without stretching */
   display: block;
   transition: transform 0.3s ease;
+  border-radius: 16px;
 }
 
 .mediagrid img:hover {
