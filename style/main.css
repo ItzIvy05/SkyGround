@@ -28,7 +28,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("https://raw.githubusercontent.com/ItzIvy05/SkyGround/main/Resources/main.jpg")
+  background: url("../resources/main.webp")
     center center / cover no-repeat;
   z-index: -2;
   transform: translateZ(0);
@@ -38,11 +38,8 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.55);
   z-index: -1;
-  transform: translateZ(0);
 }
 
 header {

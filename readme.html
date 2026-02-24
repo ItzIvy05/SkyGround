@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <title>SkyGround – ReadMe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style/main.css">
@@ -28,7 +28,7 @@
     <meta property="og:title" content="SkyGround Chronicles">
     <meta property="og:description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survial Sim, built for Skyrim Special Edition.">
     <meta property="og:url" content="https://itzivy05.github.io/SkyGround/">
-    <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.png">
+    <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.webp">
     <link rel="icon" type="image/x-icon" href="resources/ico.ico">
     
     <div class="headerlogo">
@@ -58,12 +58,8 @@
   <aside class="readme-nav">
     <a href="#requirements">System Requirements</a>
     <a href="#preinstallation">Pre-Installation</a>
-    <a href="#recommended">Recommended Requirements</a>
-    <a href="#wabbajack">Wabbajack Installation</a>
-    <a href="#postinstall">Post-Installation</a>
-    <a href="#updating">Updating the Modlist</a>
-    <a href="#removal">Removing the Modlist</a>
-    <a href="#credits">Credits & Thanks</a>
+    <a href="#pagefile-crash-prevention">Pagefile and Crash Prevention</a>
+
   </aside>
 
   <!-- RIGHT CONTENT -->
@@ -78,7 +74,7 @@
         <li>At least 8GB of GPU VRAM minimum is recommended for the list (1080p), otherwise you'll experience frequent stutters in exteriors. Higher resolutions may require even more.</li>
       </ul>
       <div class="wiki-image">
-        <img src="resources/SYS.png">
+        <img src="resources/SYS.webp">
       </div>
     </section>
 
@@ -126,7 +122,7 @@
             Disable Enable the Steam Overlay while in-game
           </code>
           <div class="wiki-image">
-            <img src="resources/steamoverlay.jpg">
+            <img src="resources/steamoverlay.webp">
           </div>
         </div>
         <div class="preinstall-warning">
@@ -136,48 +132,62 @@
         </div>
       </div>
         <h3 class="sub-heading">Antiviruses</h3>
-        <p class="section-text">
-          Remove or disable any 3rd party antiviruses such as Webroot or Bitdefender. These programs can cause issues with your installation due to how MO2's Virtual File Staging works.
-          You’ll also need to add the Wabbajack list folder to your antivirus exclusion list. Otherwise, the game may have trouble loading scripts, which can lead to crashes.
-        </p>
-          <img src="resources/anti.png">
+          <p class="section-text">
+            Remove or disable any 3rd party antiviruses such as Webroot or Bitdefender. These programs can cause issues with your installation due to how MO2's Virtual File Staging works.
+            You’ll also need to add the Wabbajack list folder to your antivirus exclusion list. Otherwise, the game may have trouble loading scripts, which can lead to crashes.
+          </p>
+
+          <div class="wiki-image">
+            <img src="resources/anti.webp">
+          </div>
+
+        <h3 class="sub-heading">Antiviruses</h3>
+          <p class="section-text">
+            <ul class="requirements-list">
+              <li>Set your Skyrim language to English: Right click on your Skyrim in Steam > Click Properties > Click the drop down box next to Language > Set the language to English</li>
+              <li>(Soft Requirement) A Nexus Premium account is recommended. Without Premium, you will need to manually click the Slow Download button for each mod.</li>
+            </ul> 
+          </p>
     </section>
 
-    <section id="wabbajack">
-      <h2>Wabbajack Installation</h2>
-      <p>
-        Something
+    <section id="pagefile-crash-prevention" class="readme-section">
+      <h2>Pagefile and Crash Prevention</h2>
+
+      <p class="section-text">
+        Larger Skyrim modlists require a significant amount of memory and running out of memory will result in crashes and other potential issues.
       </p>
-    </section>
 
-    <section id="postinstall">
-      <h2>Post-Installation</h2>
-      <p>
-        Something
-      </p>
-    </section>
+      <div class="preinstall-warning">
+        <strong>This step is NOT optional.</strong> Due to SkyGround Chronicles's size and the number of files required to be handled for the list, please do this regardless of how much RAM or VRAM you have.
+        <br><strong>If you have less than 32GB RAM Please use 61440 instead of 40960 in Initial Size (MB) and Maximum Size (MB).</strong>
+      </div>
 
-    <section id="updating">
-      <h2>Updating the Modlist</h2>
-      <p>
-        Something
-      </p>
-    </section>
+      <h3 class="sub-heading">To set up your pagefile</h3>
 
-    <section id="removal">
-      <h2>Removing the Modlist</h2>
-      <p>
-        Something
-      </p>
+      <div class="code-block">
+        <code>
+          1. Press <strong>Win Key + R</strong><br>
+          2. Type <strong>sysdm.cpl ,3</strong> and hit <strong>ENTER</strong><br>
+          3. Navigate to <strong>Performance</strong> and click the box "Settings..."<br>
+          4. Click the <strong>Advanced</strong> tab at the top<br>
+          5. Under <strong>Virtual Memory</strong>, click the box "Change..."<br>
+          6. Uncheck <strong>Automatically manage</strong> if it is checked<br>
+          7. Select your disk drive, ideally your fastest solid state drive<br>
+          8. Click the <strong>Custom size:</strong> button<br>
+          9. In the box next to <strong>Initial Size (MB)</strong> type <code>40960</code><br>
+          10. In the box next to <strong>Maximum Size (MB)</strong> type <code>40960</code><br>
+          11. Click the <strong>Set</strong> button<br>
+          12. Click <strong>OK</strong><br>
+          13. Click <strong>Apply</strong><br>
+          14. Click <strong>OK</strong><br>
+          15. Restart your computer for the new pagefile to take effect
+        </code>
+      </div>
+      
+      <div class="wiki-image-small">
+        <img src="resources/pagefile.webp">
+      </div>
     </section>
-
-    <section id="credits">
-      <h2>Credits and Thanks</h2>
-      <p>
-        Something
-      </p>
-    </section>
-
   </main>
 </section>
 
