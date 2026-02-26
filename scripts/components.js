@@ -11,7 +11,7 @@ class SiteHeader extends HTMLElement {
           <a href="index.html" class="${currentPage === "index.html" ? "active" : ""}">Home</a>
           <a href="readme.html" class="${currentPage === "readme.html" ? "active" : ""}">Read Me</a>
           <a href="media.html" class="${currentPage === "media.html" ? "active" : ""}">Media</a>
-          <a href="cat.html" class="${currentPage === "cat.html" ? "active" : ""}">CAT</a>
+          <a href="cat.html" class="${currentPage === "cat.html" ? "active" : ""}">Cat</a>
           <a href="https://discord.gg/FB62v6whbh" target="_blank" rel="noopener">Discord</a>
         </nav>
       </header>
