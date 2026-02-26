@@ -5,188 +5,174 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <title>SkyGround – ReadMe</title>
+  <title>SkyGround Chronicles - Read Me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survival Sim, built for Skyrim Special Edition.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SkyGround Chronicles">
+  <meta property="og:description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survival Sim, built for Skyrim Special Edition.">
+  <meta property="og:url" content="https://itzivy05.github.io/SkyGround/">
+  <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.webp">
+  <link rel="icon" type="image/x-icon" href="resources/ico.ico">
   <link rel="stylesheet" href="style/main.css">
   <link rel="stylesheet" href="style/wikimain.css">
   <link rel="stylesheet" href="style/lightbox.css">
 </head>
 <body>
-  <!-- Lightbox JS Import -->
-  <script src="scripts/lightbox.js"></script>
+  <script src="scripts/lightbox.js" defer></script>
+  <script src="scripts/components.js" defer></script>
+
   <div id="lightbox">
     <img id="lightbox-img" alt="">
   </div>
 
-  <!-- Header -->
   <header>
-    <title>SkyGround Chronicles</title>
-    <meta name="description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survial Sim, built for Skyrim Special Edition.">
-
-    <!-- Open Graph / Discord -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SkyGround Chronicles">
-    <meta property="og:description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survial Sim, built for Skyrim Special Edition.">
-    <meta property="og:url" content="https://itzivy05.github.io/SkyGround/">
-    <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.webp">
-    <link rel="icon" type="image/x-icon" href="resources/ico.ico">
-    
     <div class="headerlogo">
       <a href="index.html"><h1>Ivy's Workshop</h1></a>
     </div>
-    <nav>
-      <a href="readme.html">Read Me</a>
-      <a href="#">Media</a>
-      <a href="https://discord.gg/FB62v6whbh" target="_blank">Discord</a>
-    </nav>
+   <site-header></site-header>
   </header>
 
-<section class="readme-hero">
-  <h1>READ ME</h1>
-</section>
+  <section class="readme-hero">
+    <h1>READ ME</h1>
+  </section>
 
-<section class="readme-layout">
+  <section class="readme-layout">
+    <aside class="readme-nav">
+      <a href="#requirements">System Requirements</a>
+      <a href="#preinstallation">Pre-Installation</a>
+      <a href="#pagefile-crash-prevention">Pagefile and Crash Prevention</a>
+    </aside>
 
-  <!-- LEFT MENU -->
-  <aside class="readme-nav">
-    <a href="#requirements">System Requirements</a>
-    <a href="#preinstallation">Pre-Installation</a>
-    <a href="#pagefile-crash-prevention">Pagefile and Crash Prevention</a>
-
-  </aside>
-
-  <!-- RIGHT CONTENT -->
-  <main class="readme-content">
-    <section id="requirements" class="readme-section">
-      <h2>SYSTEM REQUIREMENTS</h2>
-      <ul class="requirements-list">
-        <li>SkyGround Chronicles only supports English Steam versions of full Skyrim AE. GOG and other languages are not supported.</li>
-        <li>HDD and external SSD installs are absolutely not supported.</li>
-        <li>Any remote PC / desktop services or apps are not supported. (Including Steam Link)</li>
-        <li>Only Windows 10/11 operating systems are supported. Windows LTSC, special variants, lightened editions or any other modified variant WILL NOT WORK.</li>
-        <li>At least 8GB of GPU VRAM minimum is recommended for the list (1080p), otherwise you'll experience frequent stutters in exteriors. Higher resolutions may require even more.</li>
-      </ul>
-      <div class="wiki-image">
-        <img src="resources/SYS.webp">
-      </div>
-    </section>
-
-    <section id="preinstallation" class="readme-section">
-      <h2>PRE-INSTALLATION</h2>
-
-      <div class="preinstall-warning">
-        ⚠ SkyGround Needs full AE Upgrade.
-      </div>
-
-      <div class="preinstall-warning">
-        ⚠ You must update Skyrim Special Edition to the latest version on Steam.
-        <br>
-        <strong>DO NOT downgrade your game.</strong>
-      </div>
-
-      <h3 class="sub-heading">General Utilities</h3>
-      <p class="section-text">
-        Before installing SkyGround Chronicles, please install ".NET" is a free, cross-platform, open-source developer platform for building many different types of applications. This is required for Synthesis and Scrambled Bugs to function properly.
-      </p>
-
-      <div class="utility-card">
-        <h4>.NET SDK</h4>
-        <ul class="link-list">
-          <li><a href="#">.NET 8.0 SDK (v8.0.411) – Windows x64 Installer</a></li>
-          <li><a href="#">.NET 9.0 SDK (v9.0.301) – Windows x64 Installer</a></li>
+    <main class="readme-content">
+      <section id="requirements" class="readme-section">
+        <h2>SYSTEM REQUIREMENTS</h2>
+        <ul class="requirements-list">
+          <li>SkyGround Chronicles only supports English Steam versions of full Skyrim AE. GOG and other languages are not supported.</li>
+          <li>HDD and external SSD installs are absolutely not supported.</li>
+          <li>Any remote PC / desktop services or apps are not supported. Including Steam Link.</li>
+          <li>Only Windows 10/11 operating systems are supported. Windows LTSC, special variants, lightened editions, or any other modified variant will not work.</li>
+          <li>At least 8GB of GPU VRAM minimum is recommended for the list (1080p), otherwise you'll experience frequent stutters in exteriors. Higher resolutions may require even more.</li>
         </ul>
-        <h4>Microsoft Visual C++ Redistributable</h4>
-        <ul class="link-list">
-          <li><a href="#">Visual C++ Redistributable 2015–2022 (x86)</a></li>
-          <li><a href="#">Visual C++ Redistributable 2015–2022 (x64)</a></li>
-        </ul>
-        <h4>Steam Overlay</h4>
-        <p>
-          The Steam Overlay is known to cause issues while playing Skyrim Special Edition
-          and should be disabled.
+        <div class="wiki-image">
+          <img src="resources/SYS.webp" alt="System requirements">
+        </div>
+      </section>
+
+      <section id="preinstallation" class="readme-section">
+        <h2>PRE-INSTALLATION</h2>
+
+        <div class="preinstall-warning">
+          ⚠ SkyGround needs the full AE upgrade.
+        </div>
+
+        <div class="preinstall-warning">
+          ⚠ You must update Skyrim Special Edition to the latest version on Steam.
+          <br>
+          <strong>DO NOT downgrade your game.</strong>
+        </div>
+
+        <h3 class="sub-heading">General Utilities</h3>
+        <p class="section-text">
+          Before installing SkyGround Chronicles, please install .NET. It is a free, cross-platform, open-source developer platform for building many different types of applications. This is required for Synthesis and Scrambled Bugs to function properly.
         </p>
+
+        <div class="utility-card">
+          <h4>.NET SDK</h4>
+          <ul class="link-list">
+            <li><a href="#">.NET 8.0 SDK (v8.0.411) - Windows x64 Installer</a></li>
+            <li><a href="#">.NET 9.0 SDK (v9.0.301) - Windows x64 Installer</a></li>
+          </ul>
+
+          <h4>Microsoft Visual C++ Redistributable</h4>
+          <ul class="link-list">
+            <li><a href="#">Visual C++ Redistributable 2015-2022 (x86)</a></li>
+            <li><a href="#">Visual C++ Redistributable 2015-2022 (x64)</a></li>
+          </ul>
+
+          <h4>Steam Overlay</h4>
+          <p>
+            The Steam Overlay is known to cause issues while playing Skyrim Special Edition and should be disabled.
+          </p>
+
+          <div class="code-block">
+            <code>
+              Load Steam<br>
+              Click Steam in the top toolbar<br>
+              Open Settings<br>
+              Select the In-Game tab<br>
+              Disable "Enable the Steam Overlay while in-game"
+            </code>
+            <div class="wiki-image">
+              <img src="resources/steamoverlay.webp" alt="Steam Overlay settings">
+            </div>
+          </div>
+
+          <div class="preinstall-warning">
+            Important: Do not install Skyrim in <b>C:\Program Files</b> or <b>C:\Program Files (x86)</b>. This can cause permission issues.
+            If it is already installed there, reinstall it to a different location. Something like <b>C:\Games</b> works if you only have one drive, but if you have multiple drives, something like <b>D:\Modlist</b> is preferred.
+            You can also use LostDragonist's Steam Library Setup Tool to easily move or create a new library.
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Antiviruses</h3>
+        <p class="section-text">
+          Remove or disable any 3rd party antiviruses such as Webroot or Bitdefender. These programs can cause issues with your installation due to how MO2's Virtual File Staging works.
+          You will also need to add the Wabbajack list folder to your antivirus exclusion list. Otherwise, the game may have trouble loading scripts, which can lead to crashes.
+        </p>
+
+        <div class="wiki-image">
+          <img src="resources/anti.webp" alt="Antivirus exclusions">
+        </div>
+
+        <h3 class="sub-heading">Other Notes</h3>
+        <ul class="requirements-list">
+          <li>Set your Skyrim language to English: Right click on Skyrim in Steam, click Properties, click the drop down box next to Language, and set the language to English.</li>
+          <li>(Soft Requirement) A Nexus Premium account is recommended. Without Premium, you will need to manually click the Slow Download button for each mod.</li>
+        </ul>
+      </section>
+
+      <section id="pagefile-crash-prevention" class="readme-section">
+        <h2>Pagefile and Crash Prevention</h2>
+
+        <p class="section-text">
+          Larger Skyrim modlists require a significant amount of memory and running out of memory will result in crashes and other potential issues.
+        </p>
+
+        <div class="preinstall-warning">
+          <strong>This step is NOT optional.</strong> Due to SkyGround Chronicles's size and the number of files required to be handled for the list, please do this regardless of how much RAM or VRAM you have.
+          <br><strong>If you have less than 32GB RAM, please use 61440 instead of 40960 in Initial Size (MB) and Maximum Size (MB).</strong>
+        </div>
+
+        <h3 class="sub-heading">To set up your pagefile</h3>
 
         <div class="code-block">
           <code>
-            Load Steam<br>
-            Click Steam in the top toolbar<br>
-            Open Settings<br>
-            Select the In-Game tab<br>
-            Disable Enable the Steam Overlay while in-game
+            1. Press <strong>Win Key + R</strong><br>
+            2. Type <strong>sysdm.cpl ,3</strong> and hit <strong>ENTER</strong><br>
+            3. Navigate to <strong>Performance</strong> and click the box "Settings..."<br>
+            4. Click the <strong>Advanced</strong> tab at the top<br>
+            5. Under <strong>Virtual Memory</strong>, click the box "Change..."<br>
+            6. Uncheck <strong>Automatically manage</strong> if it is checked<br>
+            7. Select your disk drive, ideally your fastest solid state drive<br>
+            8. Click the <strong>Custom size:</strong> button<br>
+            9. In the box next to <strong>Initial Size (MB)</strong> type <code>40960</code><br>
+            10. In the box next to <strong>Maximum Size (MB)</strong> type <code>40960</code><br>
+            11. Click the <strong>Set</strong> button<br>
+            12. Click <strong>OK</strong><br>
+            13. Click <strong>Apply</strong><br>
+            14. Click <strong>OK</strong><br>
+            15. Restart your computer for the new pagefile to take effect
           </code>
-          <div class="wiki-image">
-            <img src="resources/steamoverlay.webp">
-          </div>
         </div>
-        <div class="preinstall-warning">
-          Important: Do not install Skyrim in <B>C:\Program Files or C:\Program Files (x86)</b> — this can cause permission issues. 
-          If it is already installed there, reinstall it to a different location to something like <b>C:\Games</b> works if you only have one drive, but if you have multiple, something like <b>D:\Modlist\ </b>is preferred.
-          You can also use LostDragonist’s Steam Library Setup Tool to easily move or create a new library.
+
+        <div class="wiki-image-small">
+          <img src="resources/Pagefile.webp" alt="Pagefile settings">
         </div>
-      </div>
-        <h3 class="sub-heading">Antiviruses</h3>
-          <p class="section-text">
-            Remove or disable any 3rd party antiviruses such as Webroot or Bitdefender. These programs can cause issues with your installation due to how MO2's Virtual File Staging works.
-            You’ll also need to add the Wabbajack list folder to your antivirus exclusion list. Otherwise, the game may have trouble loading scripts, which can lead to crashes.
-          </p>
+      </section>
+    </main>
+  </section>
 
-          <div class="wiki-image">
-            <img src="resources/anti.webp">
-          </div>
-
-        <h3 class="sub-heading">Antiviruses</h3>
-          <p class="section-text">
-            <ul class="requirements-list">
-              <li>Set your Skyrim language to English: Right click on your Skyrim in Steam > Click Properties > Click the drop down box next to Language > Set the language to English</li>
-              <li>(Soft Requirement) A Nexus Premium account is recommended. Without Premium, you will need to manually click the Slow Download button for each mod.</li>
-            </ul> 
-          </p>
-    </section>
-
-    <section id="pagefile-crash-prevention" class="readme-section">
-      <h2>Pagefile and Crash Prevention</h2>
-
-      <p class="section-text">
-        Larger Skyrim modlists require a significant amount of memory and running out of memory will result in crashes and other potential issues.
-      </p>
-
-      <div class="preinstall-warning">
-        <strong>This step is NOT optional.</strong> Due to SkyGround Chronicles's size and the number of files required to be handled for the list, please do this regardless of how much RAM or VRAM you have.
-        <br><strong>If you have less than 32GB RAM Please use 61440 instead of 40960 in Initial Size (MB) and Maximum Size (MB).</strong>
-      </div>
-
-      <h3 class="sub-heading">To set up your pagefile</h3>
-
-      <div class="code-block">
-        <code>
-          1. Press <strong>Win Key + R</strong><br>
-          2. Type <strong>sysdm.cpl ,3</strong> and hit <strong>ENTER</strong><br>
-          3. Navigate to <strong>Performance</strong> and click the box "Settings..."<br>
-          4. Click the <strong>Advanced</strong> tab at the top<br>
-          5. Under <strong>Virtual Memory</strong>, click the box "Change..."<br>
-          6. Uncheck <strong>Automatically manage</strong> if it is checked<br>
-          7. Select your disk drive, ideally your fastest solid state drive<br>
-          8. Click the <strong>Custom size:</strong> button<br>
-          9. In the box next to <strong>Initial Size (MB)</strong> type <code>40960</code><br>
-          10. In the box next to <strong>Maximum Size (MB)</strong> type <code>40960</code><br>
-          11. Click the <strong>Set</strong> button<br>
-          12. Click <strong>OK</strong><br>
-          13. Click <strong>Apply</strong><br>
-          14. Click <strong>OK</strong><br>
-          15. Restart your computer for the new pagefile to take effect
-        </code>
-      </div>
-      
-      <div class="wiki-image-small">
-        <img src="resources/Pagefile.webp">
-      </div>
-    </section>
-  </main>
-</section>
-
-<footer>
-  &copy; 2025 SkyGround Modlist.
-</footer>
-
+  <site-footer></site-footer>
 </body>
 </html>

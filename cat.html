@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/main.css">
-  <link rel="stylesheet" href="style/hub.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style/catmain.css">
+  <link rel="stylesheet" href="style/lightbox.css">
+   <style>
+    .body{
+        background: url("../resources/cat.png")
+    }
+  </style>
 </head>
 <body>
-
+  <!-- Lightbox JS Import -->
+  <div id="lightbox">
+    <img id="lightbox-img" alt="">
+  </div>
+  <script src="scripts/lightbox.js" defer></script>
+  <script src="scripts/components.js" defer></script>
+  
   <header>
     <title>SkyGround Chronicles</title>
     <meta name="description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survial Sim, built for Skyrim Special Edition.">
@@ -21,35 +31,19 @@
     <meta property="og:title" content="SkyGround Chronicles">
     <meta property="og:description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survial Sim, built for Skyrim Special Edition.">
     <meta property="og:url" content="https://itzivy05.github.io/SkyGround/">
-    <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.png">
+    <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.webp">
     <link rel="icon" type="image/x-icon" href="resources/ico.ico">
 
     <div class="headerlogo">
-      <a href="index.html"><h1>Ivy's Workshop</h1></a>
+      <a href="#"><h1>Ivy's Workshop</h1></a>
     </div>
     <site-header></site-header>
   </header>
-
-<main class="hub-page">
-  <section class="hub-center">
-    <div class="hub-cards">
-
-      <a href="readme.html" class="hub-card">
-        <img src="resources/20250706135235_1.jpg">
-        <span>Read Me</span>
-      </a>
-
-      <a href="#" class="hub-card">
-        <img src="resources/122.jpg">
-        <span>Wiki</span>
-      </a>
-    </div>
+  <body>
+  <section class="hero">
+    <h2>CAT</h1>
+    <p>This cat is Areei Fav Meme Cat!<br>
+    <img src="resources/CAT.png">
   </section>
-</main>
-
-<footer class="footer">
-  © 2025 SkyGround Modlist.
-</footer>
-
-</body>
-</html>
+  </body>
+  </html>

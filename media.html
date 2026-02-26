@@ -6,6 +6,13 @@
   <title>SkyGround Chronicles | Media</title>
   <meta name="description" content="Browse the SkyGround Chronicles media gallery." />
 
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SkyGround Chronicles">
+  <meta property="og:description" content="Browse the SkyGround Chronicles media gallery.">
+  <meta property="og:url" content="https://itzivy05.github.io/SkyGround/media.html">
+  <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.webp">
+  <link rel="icon" type="image/x-icon" href="resources/ico.ico">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -167,22 +174,14 @@
   </style>
 </head>
 <body>
+  <script src="scripts/components.js" defer></script>
   <script src="scripts/media-gallery.js" defer></script>
+
   <div id="lightbox">
     <img id="lightbox-img" alt="">
   </div>
 
-  <header>
-    <div class="headerlogo">
-      <a href="index.html"><h1>Ivy's Workshop</h1></a>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="readme.html">Read Me</a>
-      <a href="media.html">Media</a>
-      <a href="https://discord.gg/FB62v6whbh" target="_blank" rel="noopener">Discord</a>
-    </nav>
-  </header>
+  <site-header></site-header>
 
   <main class="media-page-main">
     <section class="media-hero" data-no-lightbox>
@@ -206,8 +205,6 @@
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 SkyGround Modlist.
-  </footer>
+  <site-footer></site-footer>
 </body>
 </html>

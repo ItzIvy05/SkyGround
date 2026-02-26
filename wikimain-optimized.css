@@ -1,3 +1,5 @@
+/* ================= README PAGE ================= */
+
 .readme-hero {
   min-height: 40vh;
   display: flex;
@@ -14,12 +16,15 @@
 
 .readme-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 60px;
   max-width: 1400px;
   margin: 0 auto 80px;
-  padding: 42px 50px;
-  position: relative;
+  position: sticky;
+  top: 110px;
+  min-height: calc(100vh - 140px);
+  max-height: calc(100vh - 140px);
+  overflow: hidden;
   background:
     linear-gradient(
       145deg,
@@ -28,23 +33,26 @@
       rgba(0, 0, 0, 0.55) 100%
     ),
     rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 28px;
+  padding: 42px 50px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 25px 60px rgba(0, 0, 0, 0.65);
 }
 
+/* LEFT MENU */
 .readme-nav {
   position: sticky;
-  top: 140px;
+  top: 0;
   align-self: start;
   display: flex;
   flex-direction: column;
   gap: 14px;
   padding: 30px 10px;
   border-right: 1px solid rgba(255, 255, 255, 0.06);
+  height: fit-content;
 }
 
 .readme-nav a {
@@ -58,9 +66,34 @@
   color: var(--primary-color);
 }
 
+/* RIGHT CONTENT */
+.readme-content {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 176, 31, 0.55) rgba(255, 255, 255, 0.06);
+}
+
+.readme-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.readme-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+}
+
+.readme-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 176, 31, 0.55);
+  border-radius: 999px;
+}
+
 .readme-content section:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding-bottom: 60px;
+  scroll-margin-top: 30px;
 }
 
 .readme-content h2 {
@@ -74,13 +107,22 @@
   line-height: 1.7;
 }
 
+.readme-content .warning {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
 .readme-section {
   position: relative;
   padding: 20px 10px;
   margin-bottom: 70px;
-  scroll-margin-top: 140px;
 }
 
+.readme-section:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Requirements List Alignment ===== */
 .requirements-list {
   list-style: none;
   padding-left: 0;
@@ -111,8 +153,8 @@
   border-radius: 16px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
   margin-top: 50px;
   margin-bottom: 15px;
@@ -121,41 +163,63 @@
 .wiki-image img,
 .wiki-image-small img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  transition: transform 0.25s ease;
 }
 
-#pagefile-crash-prevention .wiki-image-small {
-  display: block ;
-  width: 60% ;
-  max-width: 60% ;
-  margin: 30px 0 15px 0 ;
-  box-sizing: border-box ;
+.wiki-image:hover img,
+.wiki-image-small:hover img {
+  transform: scale(1.03);
 }
 
-#pagefile-crash-prevention .wiki-image-small img {
-  display: block ;
-  width: 100% ;
-  max-width: 100% ;
-  height: auto ;
+.wiki-image-small {
+  max-width: 900px;
 }
 
-@media (max-width: 900px) {
-  #pagefile-crash-prevention .wiki-image-small {
-    width: 100% ;
-    max-width: 100% ;
-    margin: 20px 0 15px 0 ;
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Lower-end devices */
+@media (prefers-reduced-motion: reduce) {
+  .wiki-image img,
+  .wiki-image-small img,
+  .readme-nav a {
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
 
+/* MOBILE */
 @media (max-width: 900px) {
   .readme-layout {
     grid-template-columns: 1fr;
+    position: relative;
+    top: 0;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+    padding: 32px 24px;
+    gap: 30px;
   }
 
   .readme-nav {
     position: relative;
     top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0 0 24px;
+  }
+
+  .readme-content {
+    overflow: visible;
+    padding-right: 0;
   }
 }
