@@ -13,6 +13,7 @@
   <meta property="og:description" content="Experience the Next - Generation of Immersive Survival Roleplay. Ultimate Fantasy Survival Sim, built for Skyrim Special Edition.">
   <meta property="og:url" content="https://itzivy05.github.io/SkyGround/">
   <meta property="og:image" content="https://itzivy05.github.io/SkyGround/resources/book3.webp">
+  <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://*.youtube.com https://*.youtube-nocookie.com;">
   <link rel="icon" type="image/x-icon" href="resources/ico.ico">
   <link rel="stylesheet" href="style/main.css">
   <link rel="stylesheet" href="style/wikimain.css">
@@ -21,6 +22,7 @@
 <body>
   <script src="scripts/lightbox.js" defer></script>
   <script src="scripts/components.js" defer></script>
+  <script src="scripts/youtubeapi.js" defer></script>
 
   <div id="lightbox">
     <img id="lightbox-img" alt="">
@@ -41,6 +43,7 @@
     <aside class="readme-nav">
       <a href="#requirements">System Requirements</a>
       <a href="#preinstallation">Pre-Installation</a>
+      <a href="#download-list">Download List</a>
       <a href="#pagefile-crash-prevention">Pagefile and Crash Prevention</a>
     </aside>
 
@@ -132,8 +135,19 @@
         </ul>
       </section>
 
+      <section id="download-list" class="readme-section">
+        <h2>Download List</h2>
+
+        <p class="section-text">
+          <iframe id="player" type="text/html" width="640" height="390"
+            src="https://www.youtube.com/embed/IddGH4C-F6I?origin=https://itzivy05.github.io" 
+            frameborder="0" allowfullscreen>
+          </iframe>
+        </p>
+      </section>
+
       <section id="pagefile-crash-prevention" class="readme-section">
-        <h2>Pagefile and Crash Prevention</h2>
+        <h2>PAGEFILE AND CRASH PREVENTION</h2>
 
         <p class="section-text">
           Larger Skyrim modlists require a significant amount of memory and running out of memory will result in crashes and other potential issues.
