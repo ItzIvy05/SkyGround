@@ -71,7 +71,6 @@
           Put images inside <code>resources/media</code> and regenerate <code>media.json</code>.
         </div>
       `;
-      status.textContent = "0 images loaded";
       return;
     }
 
