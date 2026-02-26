@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyGround Chronicles | Media</title>
+  <meta name="description" content="Browse the SkyGround Chronicles media gallery." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/lightbox.css">
+
+  <style>
+    .media-page-main {
+      padding-top: 100px;
+    }
+
+    .media-hero {
+      min-height: 42vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .media-hero-inner {
+      max-width: 900px;
+    }
+
+    .media-hero h1 {
+      font-size: clamp(2.3rem, 6vw, 4.2rem);
+      margin-bottom: 14px;
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .media-hero p {
+      color: #d0d0d0;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .media-shell {
+      width: min(1280px, 95%);
+      margin: 50px auto 80px;
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 25px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    .media-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .media-toolbar h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .media-status {
+      color: #bdbdbd;
+      font-size: 0.95rem;
+    }
+
+    .media-note {
+      margin-top: 8px;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .media-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .media-btn {
+      border: 0;
+      cursor: pointer;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 12px 18px;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 6px;
+      transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .media-btn:hover {
+      background-color: #C76E00;
+      transform: translateY(-1px);
+    }
+
+    .mediagrid {
+      gap: 14px;
+    }
+
+    .media-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+      cursor: zoom-in;
+    }
+
+    .media-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .media-empty {
+      padding: 40px 18px;
+      text-align: center;
+      color: #cfcfcf;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .media-empty strong {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .media-shell {
+        padding: 20px;
+      }
+
+      .media-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .media-actions {
+        width: 100%;
+      }
+
+      .media-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script src="scripts/media-gallery.js" defer></script>
+  <div id="lightbox">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <header>
+    <div class="headerlogo">
+      <a href="index.html"><h1>Ivy's Workshop</h1></a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="readme.html">Read Me</a>
+      <a href="media.html">Media</a>
+      <a href="https://discord.gg/FB62v6whbh" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </header>
+
+  <main class="media-page-main">
+    <section class="media-hero" data-no-lightbox>
+      <div class="media-hero-inner">
+        <h1>MEDIA GALLERY</h1>
+        <p>
+          Every refresh shuffles the gallery automatically. The page reads from a JSON manifest,
+          so you only need to rebuild <code>media.json</code> after adding or removing screenshots.
+        </p>
+      </div>
+    </section>
+
+    <section class="media-shell MediaSection" data-no-lightbox>
+      <div class="media-toolbar">
+        <div>
+          <h2>Randomized gallery</h2>
+          <div id="media-status" class="media-status">Loading media...</div>
+          <div class="media-note">Click any image to open it in the lightbox.</div>
+        </div>
+
+        <div class="media-actions">
+          <button id="shuffle-btn" class="media-btn" type="button">Shuffle Again</button>
+        </div>
+      </div>
+
+      <div id="media-grid" class="mediagrid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 SkyGround Modlist.
+  </footer>
+</body>
+</html>
