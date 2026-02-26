@@ -23,7 +23,7 @@ class SiteFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <footer>
-        &copy; 2025 SkyGround Modlist.
+        &copy; 2025 - 2026 SkyGround Modlist.
       </footer>
     `;
   }
